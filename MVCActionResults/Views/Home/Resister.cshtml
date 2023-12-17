@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Resister</title>
+    <style>
+        h1{
+            text-align: center;
+        }
+        form{
+            border: 2px solid black;
+            align-items: center;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+
+        <form action="mvc.php">
+
+            <h1>Resistration Form</h1>
+            <div><label for="">First Name :</label> <input type="text"></div><br>
+            <div><label for="">Last Name :</label> <input type="text"></div><br>
+            <div><label for="">User Id :</label> <input type="text"></div><br>
+            <div> <label for="">Password :</label> <input type="password"></div><br>
+            <div> <label for="">Confirm Password :</label> <input type="password"></div><br>
+            <button type="submit">Submit</button> <button type="reset">Reset</button>
+            <button type="submit"><a href="~/home/Login">Home<a></button> <button type="reset">Reset</button>
+
+
+        </form>
+        <h4 style="text-align:center;color:red">
+            Click here to go to <a href="/Home/Index">Home Page.</a>
+        </h4>
+    </div>
+</body>
+</html>
