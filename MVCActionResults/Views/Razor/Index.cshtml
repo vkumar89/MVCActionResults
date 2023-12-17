@@ -1,0 +1,126 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <div>
+        @*Single Line Statements*@
+        @{int Count = 0; }
+        @{ Count += 100;}
+        @{
+            string str = "Hello World";
+        }
+        @{
+            object Obj = new object();
+        }
+
+        <h1>
+            value of Count is :@Count
+            <br>
+            valuve of Str is :@str
+            <br>
+            Type of object class is : @Obj.GetType();
+        </h1>
+
+        @*Multi line statement*@
+
+        @{ 
+            string Date = DateTime.Now.ToShortDateString();
+            string Time = DateTime.Now.ToShortTimeString();
+            <text>
+        date is :@Date
+        Time is : @Time
+        </text>
+
+        }
+
+        <hr>
+        @* If condition in Razor programming *@
+        @{
+            int x = 131;
+            if (x % 2 == 0)
+            {
+                <span>@x is an even number.</span>
+            }
+            else
+            {
+                <span>@x is an odd number.</span>
+            }
+        }
+        <hr>
+
+        @{ string[] Colors = { "Red", "Blue", "Green", "Yellow", "Magenta" }; }
+        @* Loops in Razor programming - For Loop *@
+        @{
+            <h4>List of colors printed using for loop:</h4>
+            <ol>
+                @for (int i = 0; i < Colors.Length; i++)
+                {
+                    <li>@Colors[i]</li>
+                }
+            </ol>
+        }
+        <hr>
+
+        <h4>List of colors printed using for loop:</h4>
+        <ol>
+            @for (int i = 0; i < Colors.Length; i++)
+            {
+                <li>@Colors[i]</li>
+            }
+        </ol>
+        <hr>
+
+        <h4>List of colors printed using for loop:</h4>
+        <ol>
+            @{
+                for (int i = 0; i < Colors.Length; i++)
+                {
+                    <li>@Colors[i]</li>
+                }
+            }
+        </ol>
+        <hr>
+
+        @* Loops in Razor programming - ForEach Loop *@
+        @{
+            <h4>List of colors printed using foreach loop:</h4>
+            <ul>
+                @foreach (string color in Colors)
+                {
+                    <li>@color</li>
+                }
+            </ul>
+        }
+        <hr>
+
+        <h4>List of colors printed using foreach loop:</h4>
+        <ul>
+            @foreach (string color in Colors)
+            {
+                <li>@color</li>
+            }
+        </ul>
+        <hr>
+
+        <h4>List of colors printed using foreach loop:</h4>
+        <ol>
+            @{
+                foreach (string color in Colors)
+                {
+                    <li>@color</li>
+                }
+            }
+        </ol>
+
+    </div>
+</body>
+</html>
